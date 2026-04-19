@@ -33,4 +33,15 @@ public class InventoryController {
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         return ResponseEntity.ok(productUseCase.createProduct(product));
     }
+
+    @GetMapping("/saludo")
+    public ResponseEntity<String> getSaludo() {
+        return ResponseEntity.ok("hola");
+    }
+
+    @GetMapping("/status")
+    public ResponseEntity<String> getStatus() {
+        return ResponseEntity.ok("ok");
+    }
+
 }
