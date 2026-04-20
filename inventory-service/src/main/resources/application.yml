@@ -36,3 +36,6 @@ management:
 logging:
   pattern:
     correlation: "[${spring.application.name:},%X{traceId:-},%X{spanId:-}] "
+
+app:
+  max-items-per-page: 20
