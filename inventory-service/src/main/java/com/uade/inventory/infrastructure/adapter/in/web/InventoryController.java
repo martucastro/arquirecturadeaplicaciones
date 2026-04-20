@@ -19,10 +19,12 @@ public class InventoryController {
 
     @GetMapping("/products")
     public ResponseEntity<List<Product>> getAllProducts() {
-        return ResponseEntity.ok(productUseCase.getAllProducts());
-    }
+        return ResponseEntity.ok()
+                .header("X-Service-Name", "inventory-service")
+                .body(productUseCase.getAllProducts());
 
-    @GetMapping("/products/{id}")
+    }
+        @GetMapping("/products/{id}")
     public ResponseEntity<Product> getProduct(@PathVariable Long id) {
         return productUseCase.getProductById(id)
                 .map(ResponseEntity::ok)
