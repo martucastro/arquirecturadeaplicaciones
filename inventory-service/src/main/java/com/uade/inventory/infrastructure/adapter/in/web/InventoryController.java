@@ -44,4 +44,9 @@ public class InventoryController {
         return ResponseEntity.ok("ok");
     }
 
+    @GetMapping("/version")
+    public ResponseEntity<String> getVersion() {
+        return ResponseEntity.ok("v1.0.0");
+    }
+
 }

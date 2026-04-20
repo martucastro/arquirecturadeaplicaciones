@@ -20,6 +20,8 @@ public class DataInitializer implements CommandLineRunner {
             productRepositoryPort.save(new Product("Laptop", 10, 999.99));
             productRepositoryPort.save(new Product("Mouse", 50, 29.99));
             productRepositoryPort.save(new Product("Teclado", 30, 79.99));
+            productRepositoryPort.save(new Product("Monitor", 15, 349.99));
+            productRepositoryPort.save(new Product("Auriculares", 25, 59.99));
         }
     }
 }
