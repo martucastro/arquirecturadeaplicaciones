@@ -1,6 +1,9 @@
 server:
   port: 8082
 
+app:
+  max-items-per-page: 20
+
 spring:
   application:
     name: inventory-service
